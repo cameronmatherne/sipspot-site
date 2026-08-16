@@ -1,0 +1,15 @@
+# Authorized sellers for SipSpot's mobile ad inventory (IAB Tech Lab app-ads.txt).
+#
+# AdMob will not lift "Limited ad serving" on a new app until it crawls this file
+# at the root of the developer website listed on the app's store page and finds
+# the publisher ID below. It must be served from https://sipspot.app/app-ads.txt
+# — the domain Apple shows as the Developer Website, exactly as entered in App
+# Store Connect. Anything else (a redirect to another host, a 404, a stale pub ID)
+# fails verification silently and the app keeps serving no ads.
+#
+# Everything in public/ is copied to the root of the `expo export -p web` output,
+# which the deploy-site job publishes to sipspot.app. That job runs with
+# force_orphan, so this file existing in the repo is the only reason it survives
+# a redeploy — same reasoning as the workflow's `cname:` input.
+
+google.com, pub-7644249731187145, DIRECT, f08c47fec0942fa0
